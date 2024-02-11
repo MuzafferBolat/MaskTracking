@@ -1,4 +1,4 @@
-﻿using Business.Concrete;
+using Business.Concrete;
 using Entities.Concrete;
 public class Program
 {
@@ -11,44 +11,44 @@ public class Program
         //Diziler /Arrays
 
         string ogrenci1 = "Engin";
-        string ogrenci2 = "Kerem";
-        string ogrenci3 = "Berkay";
+        string ogrenci2 = "Muzaffer";
+        string ogrenci3 = "Ahmet";
 
         string[] ogrenciler = new string[3];
         ogrenciler[0] = "Engin";
-        ogrenciler[1] = "Kerem";
-        ogrenciler[2] = "Berkay";
+        ogrenciler[1] = "Muzaffer";
+        ogrenciler[2] = "Ahmet";
 
         ogrenciler = new string[4];
-        ogrenciler[3] = "İlker";
+        ogrenciler[3] = "Sefa";
 
         for (int i = 0; i < ogrenciler.Length; i++)
         {
             Console.WriteLine(ogrenciler[i]);
         }
 
-        string[] sehirler1 = new[] { "Ankara", "İstanbul", "İzmir" };
-        string[] sehirler2 = new[] { "Bursa", "Antalya","Diyarbakır" };
+        string[] sehirler1 = new[] { "Amasya", "Ankara", "İstanbul" };
+        string[] sehirler2 = new[] { "Ankara", "Bursa","Gazi Antep" };
 
         sehirler2 = sehirler1;
-        sehirler1[0] = "Adana";
+        sehirler1[0] = "Samsun";
         Console.WriteLine(sehirler2[0]);
 
         Person person1 = new Person();
-        person1.FirstName = "Engin";
-        person1.LastName = "Demiroğ";
+        person1.FirstName = "Muzaffer";
+        person1.LastName = "Bolat";
         person1.NationalIdentity = 123;
         person1.DateOfBirthYear = 1985;
 
         Person person2 = new Person();
-        person2.FirstName = "Murat";
+        person2.FirstName = "Ahmet";
 
         foreach (var sehir in sehirler1)
         {
             Console.WriteLine(sehir);
         }
-        List<string> yeniSehirler1 = new List<string>() { "Ankara 1", "İstanbul 1","İzmir 1" };
-        yeniSehirler1.Add("Adana 1");
+        List<string> yeniSehirler1 = new List<string>() { "Amasya 1", "Ankara 1","İstanbul 1" };
+        yeniSehirler1.Add("Samsun 1");
         foreach (var sehir in yeniSehirler1)
         {
             Console.WriteLine(sehir);
@@ -75,9 +75,9 @@ public class Program
         int sayi = 100;
         bool girisYapmisMi = false;
 
-        string ad = "Engin";
-        string soyad = "Demiroğ";
-        int dogumYili = 1985;
+        string ad = "Muzaffer";
+        string soyad = "Bolat";
+        int dogumYili = 1990;
         long tcNo = 12345678910;
 
         Console.WriteLine(mesaj);
