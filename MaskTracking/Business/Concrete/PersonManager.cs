@@ -1,4 +1,4 @@
-﻿using Business.Abstract;
+using Business.Abstract;
 using Entities.Concrete;
 using MernisServiceReference;
 namespace Business.Concrete;
@@ -17,7 +17,7 @@ public class PersonManager : IApplicantService
         KPSPublicSoapClient client = new KPSPublicSoapClient(KPSPublicSoapClient.EndpointConfiguration.KPSPublicSoap12);
         var result = client.TCKimlikNoDogrulaAsync(
             new TCKimlikNoDogrulaRequest
-            (new TCKimlikNoDogrulaRequestBody(person.NationalIdentity, person.FirstName, person.LastName, person.DateOfBirthYear)));
+            (new TCKimlikNoDogrulaRequestBody(person.IdentityNumber, person.FirstName, person.LastName, person.DateOfBirthYear)));
         return result.Result.Body.TCKimlikNoDogrulaResult;
     }
 }
